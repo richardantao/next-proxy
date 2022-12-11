@@ -1,0 +1,32 @@
+{
+	"name": "server",
+	"version": "0.1.0",
+	"description": "",
+	"main": "index.js",
+	"engines": {
+		"node": "18.x",
+		"npm": "9.x"
+	},
+	"scripts": {
+		"dev": "nodemon",
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"keywords": [],
+	"author": "Richard Antao <richardmantao@gmail.com> (https://richardantao.com/)",
+	"license": "MIT",
+	"dependencies": {
+		"cors": "^2.8.5",
+		"express": "^4.18.2",
+		"morgan": "^1.10.0"
+	},
+	"devDependencies": {
+		"@types/cors": "^2.8.12",
+		"@types/express": "^4.17.14",
+		"@types/morgan": "^1.9.3",
+		"@types/node": "^18.11.10",
+		"nodemon": "^2.0.20",
+		"ts-node": "^10.9.1",
+		"tsconfig-paths": "^4.1.1",
+		"typescript": "^4.9.3"
+	}
+}
