@@ -68,9 +68,9 @@ _header: 'POST /v1/access-tokens?provider=credentials HTTP/1.1\r\n' +
 'x-vercel-ip-country-region: ON\r\n' +
 'x-content-type-options: nosniff\r\n' +
 'accept-encoding: gzip, deflate, br\r\n' +
-'referer: https://learnify-web-iota.vercel.app/loginrn' +
+'referer: [APP_URL]/loginrn' +
 'content-length: 158\r\n' +
-'x-vercel-ip-city: Georgetown\r\n' +
+'x-vercel-ip-city: [CITY_OF_ORIGIN]\r\n' +
 'x-vercel-proxied-for: 24.141.219.122\r\n' +
 'x-vercel-proxy-signature: Bearer 7c6182623471eb2fa646ae217ab0b5e3642d7f404b7080d94d3665ee32b975fd\r\n' +
 'connection: close\r\n' +
@@ -91,7 +91,7 @@ upgradeOrConnect: false,
 parser: null,
 maxHeadersCount: null,
 reusedSocket: false,
-host: 'ipa.learnify.ca',
+host: [EXTERNAL_API],
 protocol: 'https:',
 _redirectable: [Circular *1],
 [Symbol(kCapture)]: false,
@@ -102,7 +102,7 @@ _redirectable: [Circular *1],
 [Symbol(kOutHeaders)]: [Object: null prototype],
 [Symbol(kUniqueHeaders)]: null
 },
-_currentUrl: 'https://ipa.learnify.ca/v1/access-tokens?provider=credentials',
+_currentUrl: 'https://[EXTERNAL_API]/v1/access-tokens?provider=credentials',
 _timeout: null,
 [Symbol(kCapture)]: false
 }
@@ -112,5 +112,5 @@ Runtime.ExitError
 ```
 
 # Expectations
-1. When simulting a login on `/login`, the user should be redirected to `/dashboard` after pressing the Login button.
+1. When simulating a login on `/login`, the user should be redirected to `/dashboard` after pressing the Login button.
 2. A user should be redirected from `/dashboard` to `/login` when the user attempts to logout. The access token should be destroyed, preventing further access to `/dashboard` unless the user manually logs in again.
