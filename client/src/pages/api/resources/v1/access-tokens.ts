@@ -51,8 +51,6 @@ const login = (req: NextApiRequest, res: NextApiResponse) => new Promise<void>(
 const logout = (req: NextApiRequest, res: NextApiResponse) => {
 	const cookies = new Cookies(req, res);
 
-	console.log("LOGOUT!");
-
 	// Delete the cookies by not setting a value
 	cookies.set(ACCESS_TOKEN);
 
